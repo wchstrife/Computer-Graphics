@@ -1,96 +1,55 @@
-FUNDAMENTALS OF COMPUTER GRAPHICS -  PROJECT REPORT
+# B-5 SnowStorm
 
-Author: Valentin KAO <valentin.kao@epitech.eu>
-		张有请 - 2017280242
-		
-The purpose of this project is to implement an OpenGl program with particle
-system : 
-- The particle size varies and simulate a direction of snowflake
-- Less snow at the beginning, slowly increasing over time
+- 王宸昊
+- 2019214541
+- wch19@mails.tsinghua.edu.cn
 
----------------------------------------------------------------------------
-VIDEO CAPTURE
----------------------------------------------------------------------------
+## 实验要求
 
-The video capture of my program named screenrecord.mp4, is available from
-the root of the folder.
-0s -> 13s : Normal speed
-13s -> 24s : Speed up a lot, to show that number of snowflakes increase.
-24s -> End : normal speed with a lot of snowflakes
----------------------------------------------------------------------------
-REQUIREMENTS
----------------------------------------------------------------------------
-•	GCC 5 or later
-•	CMake 3.9 or later
-•	OpenGL, GLUT and SOIL libraries.
-The code hasn't been tested on Windows but should work on Visual Studio
-2015 and later.
+实现简单的粒子效果-下雪
 
----------------------------------------------------------------------------
-BUILD AND USAGE
----------------------------------------------------------------------------
-From the folder in which you found this report, please enter the following
-command lines.
-1.		mkdir build && cd build
-2.		cmake ..
-3.		make
+1) 实现下雪的粒子效果;
+2) 粒子的大小不一，运动方向模拟雪花运动方向; 
+3) 开始时雪花较少，随着时间慢慢增多;
 
-Once the compilated was successful, you can execute the program. 
-Here is the usage of the program.
+## 实验环境
 
-	./SnowStorm [--width=x] [--height=y] [--title=”Assignment”]
-	
----------------------------------------------------------------------------
-FLAGS – OPTIONS	DESCRIPTION	DEFAULT
----------------------------------------------------------------------------
-width, w	Set the width of the window	900
-height, h	Set the height of the window	900
-title, t	Set the title of the window	“Assignment”
+- OSX
+- CMake
+- GCC
+- OpenGL
+- GLUT
+- GLEW
+- GLM
+- SOIL
 
+## 运行
 
----------------------------------------------------------------------------
-SOFTWARE DESIGN
----------------------------------------------------------------------------
-In order to implement future project easily, I define a simple application
-design. Those three classes are singletons avoiding any multiple instances.
+```bash
+mkdir build
+cd build
+cmake ..
+make
+./SnowStorm [--width=x] [--height=y] [--title=”Chenhao Wang 2019214541”]
+```
 
-Application class is in charge of parsing the arguments and to init the
-graphical core of the program with the input window size or the input
-window name. 
+## 实验原理
 
-GraphicalCore initializes OpenGL engine : window creation, keyboard handler,
-mouse handler, reshape handler, etc.
+按方向上键加快粒子下落的速度，按方向下键减少粒子下落速度。按下ESC退出程序
 
-Engine is the core of the project : In change of enabling/disabling some 
-features of OpenGL, it will contain the main function of update. It will
-also clear the window, setup the background and call the Particle Manager
+每个Snow Particle类有三个属性
+1. glm::vec3 Position ： 粒子位置
+2. glm::vec3 Velocity ： 粒子速度
+3. GLfloat Size ： 粒子大小
 
-ParticleManager will be the main engine of the particles. It will init
-all the particles by loading the texture, create the elements in a vector
-and render each elements of the vector. 
+对于每个粒子的初始化，随机初始化位置和速度大小后插入Buffer队列中，同时加载纹理，绑定。
 
----------------------------------------------------------------------------
-ALGORITHM IMPLEMENTED
----------------------------------------------------------------------------
+随后随时间按照速度更改粒子的位置，同时每隔T时间不断生成新的粒子。
 
-If you look at the function Update of the Engine class, you will this algo-
-rithm :
--   After activating GL_TEXTURE_2D, it draws the background by using drawing
- a square textured.
--   It enables blending and texturing. It loads the texture if the texture is
-not loaded yet. Otherwise, it binds the texture loaded.
+当粒子到达窗口的底端时，将其位置重新设置于窗口的最上方。
 
-It calls then the function Render of ParticleManager by passing the deltaTime
-as parameter : Each particles has a position, a velocity and a size.
-The function Render updates the positions of the particles depending on their
-own velocities and the delta time. If the particle is out of the window, it
-resets its position to the top of the window instead of erasing it.
+使用GLUT添加的键盘的响应事件，按下时增加或者减少速度的Y方向分量。
 
-A new particle is created each 0.25 second.
+## 实验效果
 
----------------------------------------------------------------------------
-FUNCTIONNALITIES
----------------------------------------------------------------------------
-By pressing the key ESC, you close the program properly.
-By pressing the arrow UP, the refresh speed of the window increases and
-snowflakes go down faster, otherwise, pressing the arrow DOWN decreases it.
+见 B-5 SnowStorm 演示视频.mov
