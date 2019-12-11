@@ -16,7 +16,7 @@
 
 #define DEFAULT_WIDTH 960
 #define DEFAULT_HEIGHT 960
-#define WINDOW_TITLE "Assignment 2"
+#define WINDOW_TITLE "B-1 StarsRotating"
 
 struct Options
 {
