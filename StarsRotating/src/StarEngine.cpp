@@ -1,5 +1,5 @@
 //
-// Created by edai on 20/03/18.
+// Created by wchstrife.
 //
 
 #include <sstream>
@@ -23,6 +23,7 @@ StarEngine::~StarEngine()
 {
 }
 
+// 预计算位置， 计算阿基里德螺旋线
 void StarEngine::InitStars()
 {
     std::random_device rd;

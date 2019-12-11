@@ -1,5 +1,5 @@
 //
-// Created by edai on 20/03/18.
+// Created by wchstrife.
 //
 
 #include <StarEngine.hpp>
