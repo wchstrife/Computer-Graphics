@@ -1,0 +1,34 @@
+resoruces/cube.obj 12 faces
+	   3 my algo : 3 iterations : Time consumed: 0.00198s
+	    Meshlab v.1.3.2 : pplied filter Subdivision Surfaces: Loop in 14 msec
+	   	   386 - 768 faces
+
+ 	    5 my : Time consumed: 0.037641 s
+	     meshlab : Applied filter Subdivision Surfaces: Loop in 21 msec
+	    
+	     	   6146 - 12288
+		   
+	   8 it : 2.68664 s
+	     meshlab :   Loop in 830 msec
+	     	     383218 - 786432
+
+resources/kitten.obj 2740
+		     it 3 : 0.563791 s
+	  	     	their Loop in 151 msec
+	   
+	   87680 - 175360
+	   5 :  time consumed: 10.256
+	    their : Loop in 3006 msec 
+
+	    1402880 / 2805760
+
+bunny  10000 faces
+	     3 : 2.21695
+	       their : 677 msec	
+		320002 - 640000
+
+	  5 40.05s
+	    their : 10438ms
+	    Verts: 5120002
+	    Faces: 10240000
+	    

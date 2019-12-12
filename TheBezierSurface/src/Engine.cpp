@@ -1,6 +1,4 @@
-//
-// Created by edai on 20/03/18.
-//
+
 
 #include <sstream>
 #include "Engine.hpp"

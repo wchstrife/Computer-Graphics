@@ -1,6 +1,4 @@
-//
-// Created by edai on 20/03/18.
-//
+
 
 #ifndef ENGINE_HPP
 #define ENGINE_HPP

@@ -1,13 +1,11 @@
-//
-// Created by edai on 19/03/18.
-//
+
 
 #ifndef ASSIGNMENT2_APPLICATION_HPP
 #define ASSIGNMENT2_APPLICATION_HPP
 
 #include <OpenGL/gl.h>
 #include <GLUT/glut.h>
-// #include <GL/freeglut.h>
+#include <GLUT/freeglut.h>
 #include <iostream>
 #include <SOIL/SOIL.h>
 #include <unistd.h>

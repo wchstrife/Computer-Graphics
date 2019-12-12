@@ -1,6 +1,4 @@
-//
-// Created by edai on 20/03/18.
-//
+
 
 #ifndef ASSIGNMENT2_GRAPHICALCORE_HPP
 #define ASSIGNMENT2_GRAPHICALCORE_HPP

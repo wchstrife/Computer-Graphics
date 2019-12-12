@@ -1,6 +1,3 @@
-//
-// Created by edai on 19/03/18.
-//
 
 #include "Application.hpp"
 #include "GraphicalCore.hpp"
