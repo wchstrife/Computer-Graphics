@@ -9,4 +9,7 @@
 ## B-6 绘制贝塞尔曲面(15)
 - 目录：TheBezierSurface
 
+## B-7 网格简化算法(15)
+- 目录：MeshSubsimp
+
 
