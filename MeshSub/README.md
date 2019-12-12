@@ -1,4 +1,4 @@
-# B-5 SnowStorm
+# A-4 网格细分
 
 - 王宸昊
 - 2019214541
@@ -6,9 +6,9 @@
 
 ## 实验要求
 
-网格简化算法
+网格加密算法
 
-1. 复现Surface Simplification Using Quadric Error Metrtcs
+1. Loop scheme
 
 ## 实验环境
 
@@ -49,5 +49,8 @@ make
 ![./results/cube-1.png](./results/cube-1.png)
 ![./results/cube-1.png](./results/cube-2.png)
 ![./results/cube-1.png](./results/cube-3.png)
+
+3次迭代-386顶点- 768面片
+5次迭代-6146顶点- 12288面片
 
 
